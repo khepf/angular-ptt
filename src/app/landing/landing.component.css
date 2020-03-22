@@ -1,0 +1,21 @@
+.landing-section {
+  /* height: 100vh; */
+  border: 1px solid red;
+   padding: 30px;
+}
+
+.landing-card {
+  max-width: 400px;
+  border: 1px solid black;
+ 
+}
+
+/* .example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+} */
+
+
+/* .landing-button {
+  padding: 10px;
+} */
