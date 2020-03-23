@@ -33,6 +33,8 @@ import { PastTrainingsComponent } from './training/past-trainings/past-trainings
 import { TrainingComponent } from './training/training.component';
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
 import { AuthService } from './auth/auth.service';
+import { TrainingService } from './training/training.service';
+import { PlayersService } from './players/players.service';
 
 @NgModule({
    declarations: [
@@ -70,7 +72,7 @@ import { AuthService } from './auth/auth.service';
       MatCardModule,
       ReactiveFormsModule
    ],
-   providers: [AuthService],
+   providers: [AuthService, TrainingService, PlayersService],
    bootstrap: [
       AppComponent
    ],
