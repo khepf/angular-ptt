@@ -32,6 +32,7 @@ import { NewTrainingComponent } from './training/new-training/new-training.compo
 import { PastTrainingsComponent } from './training/past-trainings/past-trainings.component';
 import { TrainingComponent } from './training/training.component';
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
    declarations: [
@@ -69,7 +70,7 @@ import { StopTrainingComponent } from './training/current-training/stop-training
       MatCardModule,
       ReactiveFormsModule
    ],
-   providers: [],
+   providers: [AuthService],
    bootstrap: [
       AppComponent
    ],
