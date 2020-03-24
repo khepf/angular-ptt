@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { HomeService } from './home.service';
 
 @Component({
   selector: 'app-home',
@@ -7,17 +8,23 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  form: FormGroup;
+  homeForm: FormGroup;
 
   constructor() { }
 
   ngOnInit(): void {
+    const formFromLocalStorage = JSON.parse(window.localStorage.getItem('serviceData'));
+    console.log('formFromLocalStorage', formFromLocalStorage.input1);
+    this.homeForm = new FormGroup({
+      input1: new FormControl(formFromLocalStorage.input1),
+      input2: new FormControl(formFromLocalStorage.input2)
+    });
 
   }
 
-  onSendToLocalStorage(event) {
-  
-    // localStorage.setItem('serviceData', JSON.stringify(f.value));
+  onSaveToLocalStorage() {
+    console.log('homeForm', this.homeForm);
+    localStorage.setItem('serviceData', JSON.stringify(this.homeForm.value));
   }
 
 }

@@ -1,24 +1,23 @@
-<section class="new-training" fxLayout fxLayoutAlign="center center">
-    <form> 
-      <mat-card  fxFlex.xs="100%" fxFlex="400px">
-        <mat-card-title fxLayoutAlign="center">Testing Local Storage</mat-card-title>
-        <mat-card-content fxLayoutAlign="center">
-            <mat-form-field>
-                <mat-label>Input1</mat-label>
-                <input matInput type="number">
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Input2</mat-label>
-                <input matInput type="number">
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Input3</mat-label>
-                <input matInput type="number">
-            </mat-form-field>
-        </mat-card-content>
-        <mat-card-actions fxLayoutAlign="center">
-          <button type="submit" mat-button>Send to LS</button>
-        </mat-card-actions>
-      </mat-card>
+<section>
+    <form 
+    fxLayout="column" 
+    fxLayoutAlign="center center"
+    fxLayoutGap="15px"
+    [formGroup]="homeForm"
+    (ngSubmit)="onSaveToLocalStorage()"
+    >
+      <mat-form-field>
+        <input 
+        type="number" 
+        matInput 
+        formControlName="input1">
+      </mat-form-field>
+      <mat-form-field>
+        <input 
+        type="number" 
+        matInput 
+        formControlName="input2">
+      </mat-form-field>
+      <button type="submit" mat-fab color="primary">Save</button>
     </form>
   </section>
