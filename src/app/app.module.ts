@@ -25,7 +25,8 @@ import { MatTableModule } from "@angular/material/table";
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { AngularFireModule } from "angularfire2";
-import { AngularFirestoreModule } from "angularfire2/firestore"; 
+import { AngularFirestoreModule } from "angularfire2/firestore";
+import { AngularFireAuthModule } from "angularfire2/auth"; 
 
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -64,6 +65,7 @@ import { environment } from '../environments/environment';
       FlexLayoutModule,
       AngularFireModule.initializeApp(environment.firebase),
       AngularFirestoreModule,
+      AngularFireAuthModule,
       FormsModule,
       MatButtonModule,
       MatDialogModule,
