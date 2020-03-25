@@ -13,15 +13,19 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from "@angular/material/dialog";
+import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatSelectModule } from "@angular/material/select";
+import { MatSortModule } from "@angular/material/sort";
 import { MatTableModule } from "@angular/material/table";
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { AngularFireModule } from "angularfire2";
+import { AngularFirestoreModule } from "angularfire2/firestore"; 
 
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -36,6 +40,7 @@ import { StopTrainingComponent } from './training/current-training/stop-training
 import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
 import { PlayersService } from './players/players.service';
+import { environment } from '../environments/environment';
 
 @NgModule({
    declarations: [
@@ -57,6 +62,8 @@ import { PlayersService } from './players/players.service';
       AppRoutingModule,
       BrowserAnimationsModule,
       FlexLayoutModule,
+      AngularFireModule.initializeApp(environment.firebase),
+      AngularFirestoreModule,
       FormsModule,
       MatButtonModule,
       MatDialogModule,
@@ -64,10 +71,12 @@ import { PlayersService } from './players/players.service';
       MatIconModule,
       MatInputModule,
       MatListModule,
+      MatPaginatorModule,
       MatProgressSpinnerModule,
       MatSelectModule,
       MatSidenavModule,
       MatSliderModule,
+      MatSortModule,
       MatTableModule,
       MatTabsModule,
       MatToolbarModule,
