@@ -42,6 +42,8 @@ import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
 import { PlayersService } from './players/players.service';
 import { environment } from '../environments/environment';
+import { PlayersTabComponent } from './home/players-tab/players-tab.component';
+import { TeamsTabComponent } from './home/teams-tab/teams-tab.component';
 
 @NgModule({
    declarations: [
@@ -56,7 +58,9 @@ import { environment } from '../environments/environment';
       NewTrainingComponent,
       PastTrainingsComponent,
       TrainingComponent,
-      StopTrainingComponent
+      StopTrainingComponent,
+      PlayersTabComponent,
+      TeamsTabComponent
    ],
    imports: [
       BrowserModule,

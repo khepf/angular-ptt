@@ -1,4 +1,4 @@
-<section>
+<!-- <section>
     <form 
     fxLayout="column" 
     fxLayoutAlign="center center"
@@ -20,4 +20,16 @@
       </mat-form-field>
       <button type="submit" mat-fab color="primary">Save</button>
     </form>
-  </section>
+  </section> -->
+<section>
+  <mat-tab-group>
+    <mat-tab label="Players">
+      <app-players-tab></app-players-tab>
+    </mat-tab>
+    <mat-tab label="Teams">
+      <app-teams-tab></app-teams-tab>
+    </mat-tab>
+  </mat-tab-group>
+</section>
+
+
