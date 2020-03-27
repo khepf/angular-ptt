@@ -20,6 +20,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatSelectModule } from "@angular/material/select";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatSortModule } from "@angular/material/sort";
 import { MatTableModule } from "@angular/material/table";
 import { MatTabsModule } from "@angular/material/tabs";
@@ -82,6 +83,7 @@ import { TeamsTabComponent } from './home/teams-tab/teams-tab.component';
       MatSelectModule,
       MatSidenavModule,
       MatSliderModule,
+      MatSnackBarModule,
       MatSortModule,
       MatTableModule,
       MatTabsModule,

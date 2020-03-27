@@ -20,7 +20,6 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('jmk registerForm', this.registerForm);
     this.authService.registerUser({
       email: this.registerForm.value.email,
       password: this.registerForm.value.password

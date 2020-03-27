@@ -17,7 +17,6 @@ export class TeamsTabComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.tmChangedSubscription = this.teamsService.teamsChanged.subscribe((teams: Team[]) => {
-      console.log('jmk teams', teams);
       this.dataSource.data = teams;
     });
    this.teamsService.fetchTeams();
