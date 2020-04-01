@@ -45,6 +45,7 @@ import { PlayersService } from './players/players.service';
 import { environment } from '../environments/environment';
 import { PlayersTabComponent } from './home/players-tab/players-tab.component';
 import { TeamsTabComponent } from './home/teams-tab/teams-tab.component';
+import { UIService } from './shared/ui-service';
 
 @NgModule({
    declarations: [
@@ -91,7 +92,7 @@ import { TeamsTabComponent } from './home/teams-tab/teams-tab.component';
       MatCardModule,
       ReactiveFormsModule
    ],
-   providers: [AuthService, TrainingService, PlayersService],
+   providers: [AuthService, TrainingService, PlayersService, UIService],
    bootstrap: [
       AppComponent
    ],

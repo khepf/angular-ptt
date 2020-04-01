@@ -4,7 +4,16 @@
 
 export const environment = {
   production: false,
-
+  firebase: {
+    apiKey: "AIzaSyBGONrFom9GR_9Vb84Vg3MKiUeTaqhTn4U",
+    authDomain: "ng-fitness-tracker-3f7a9.firebaseapp.com",
+    databaseURL: "https://ng-fitness-tracker-3f7a9.firebaseio.com",
+    projectId: "ng-fitness-tracker-3f7a9",
+    storageBucket: "ng-fitness-tracker-3f7a9.appspot.com",
+    messagingSenderId: "909967913200",
+    appId: "1:909967913200:web:98f17cbe8a66c8700bd235",
+    measurementId: "G-0ZX0GRLXKF"
+  }
 
 };
 
